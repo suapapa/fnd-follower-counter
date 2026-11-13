@@ -1,0 +1,15 @@
+# Agent skills and local agent directory (kept locally, excluded from Git)
+.agents/
+skills-lock.json
+
+# Binaries and Go test artifacts
+/fnd-follower-counter
+/fnd-twitch-counter
+*.test
+*.out
+
+# Local runtime configuration (track config.example.yaml instead)
+config.yaml
+
+# OS metadata
+.DS_Store

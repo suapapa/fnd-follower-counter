@@ -1,0 +1,17 @@
+[Unit]
+Description=fnd follower counter
+
+[Service]
+Environment="YOUTUBE_API_KEY=your_youtube_api_key"
+Environment="INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token"
+Environment="INSTAGRAM_IG_USER_ID=your_instagram_ig_user_id"
+# Optional: if using Twitch
+# Environment="TWITCH_CLIENT_ID=your_client_id"
+# Environment="TWITCH_CLIENT_SECRET=your_client_secret"
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/home/pi/fnd-follower-counter -c /home/pi/config.yaml
+
+[Install]
+WantedBy=multi-user.target
